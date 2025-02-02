@@ -1,0 +1,78 @@
+
+.Header {
+    
+    display: flex;
+    flex-direction: row;
+    
+ 
+    .logo {
+        width: 70px;
+        padding: 20px;
+        outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+        outline-offset: calc(var(--stroke-weight) / -2); 
+    }
+
+    .text {
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        font-family: "JetBrains";
+        font-size: 11px;
+        flex: 1;
+        margin: 0px;
+        padding: 0px 20px;
+ 
+        outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+        outline-offset: calc(var(--stroke-weight) / -2); 
+    }
+    .menu {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+           
+        outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+        outline-offset: calc(var(--stroke-weight) / -2); 
+
+        font-family:"JetBrains" ;
+
+        .menubutten {
+            margin:  0px  50px;
+        }
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+      
+        flex: 1;
+        .contactText {
+            margin: 0px;
+            padding:  0px 20px;
+            flex: 1;
+            outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+            outline-offset: calc(var(--stroke-weight) / -2); 
+        }
+    }
+    .icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+ 
+    }
+    .icon {
+        flex: 1;
+        outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+        outline-offset: calc(var(--stroke-weight) / -2); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icons img {
+        width: 25px;
+        margin: 0px 16px;
+        padding: 0px;
+        
+    }
+}

@@ -1,0 +1,41 @@
+<svg
+  id="logo"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 325.27 325.57"
+  width="100"
+  height="100"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 28px;
+    
+      }
+    </style>
+  </defs>
+
+  <polyline
+    class="cls-1"
+    points="73.69 325.57 73.69 177.59 162.37 28.32 283.44 215.08"
+  />
+  <polyline class="cls-1" points="14.5 147.99 14.5 14.8 118.55 14.8" />
+  <polyline
+    class="cls-1"
+    points="132.88 325.57 132.88 162.79 206.88 162.79"
+  />
+  <polyline
+    class="cls-1"
+    points="192.08 207.18 192.08 251.58 325.26 251.58"
+  />
+  <line class="cls-1" x1="310.47" y1="207.18" x2="311.47" y2="177.59" />
+  <line class="cls-1" x1="310.47" y1="147.99" x2="310.47" />
+  <line class="cls-1" x1="251.27" x2="251.27" y2="118.39" />
+  <line class="cls-1" x1="73.69" y1="88.79" x2="73.69" y2="59.2" />
+  <line class="cls-1" x1="14.5" y1="177.59" x2="14.5" y2="325.57" />
+  <line class="cls-1" x1="177.28" y1="310.77" x2="325.27" y2="310.77" />
+
+ 
+</svg>

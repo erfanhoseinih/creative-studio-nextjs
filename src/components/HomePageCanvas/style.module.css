@@ -1,0 +1,11 @@
+
+.homecanvas {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden; 
+    height: 100%;  
+    outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
+    outline-offset: calc(var(--stroke-weight) / -2); 
+}
+
+ 
