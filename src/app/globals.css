@@ -29,13 +29,20 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     height: 100%;
     background-color: var(--color-primary);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 p::selection {
-    background:var(--color-secondary) ;
+    background: var(--color-secondary);
     color: var(--color-primary);
+}
+
+img::selection {
+    background: none;
 }

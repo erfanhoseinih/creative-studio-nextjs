@@ -1,0 +1,30 @@
+.homepage {
+
+    height: calc(100vh - 100px);
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.homepageCanvas {
+    width: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    width: 100%;
+    font-family: "JetBrains";
+    font-size: 70px;
+    margin: 0px;
+    padding: 0px;
+ 
+}
+
+
+.title h1 {
+    margin: 0px 50px;
+}

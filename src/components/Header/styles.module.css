@@ -10,6 +10,7 @@
         padding: 20px;
         outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
         outline-offset: calc(var(--stroke-weight) / -2); 
+        cursor: pointer;
     }
 
     .text {
@@ -31,7 +32,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-           
+        flex:1;
         outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
         outline-offset: calc(var(--stroke-weight) / -2); 
 
@@ -39,12 +40,12 @@
 
         .menubutten {
             margin:  0px  50px;
+            cursor: pointer;
         }
     }
     .contact {
         display: flex;
         flex-direction: column;
-      
         flex: 1;
         .contactText {
             margin: 0px;
@@ -52,6 +53,7 @@
             flex: 1;
             outline: var(--stroke-weight)  solid rgb(0, 0, 0); 
             outline-offset: calc(var(--stroke-weight) / -2); 
+            
         }
     }
     .icons {
@@ -68,11 +70,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     .icons img {
         width: 25px;
         margin: 0px 16px;
         padding: 0px;
+      
         
     }
 }

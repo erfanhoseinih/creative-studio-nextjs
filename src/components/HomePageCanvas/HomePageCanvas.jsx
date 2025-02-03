@@ -26,9 +26,10 @@ const CanvasComponent = () => {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+      ctx.canvas.width = canvas.clientWidth;
+      ctx.canvas.height = canvas.clientHeight;
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     };
 
     resizeCanvas();
@@ -46,12 +47,14 @@ const CanvasComponent = () => {
     });
 
     const animate = () => {
-      // requestAnimationFrame(animate);
+
+      requestAnimationFrame(animate);
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#f40c3f";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      const width = ctx.canvas.width;
-      const height = ctx.canvas.height;
+      const width = canvas.width;
+      const height = canvas.height;
 
       if (parseInt(animationTime * 4000) % 2 == 0) {
         waves = getWaves(
@@ -81,10 +84,11 @@ const CanvasComponent = () => {
 
       animationTime += 0.0002;
     };
-
+    
     animate();
 
     window.addEventListener("resize", resizeCanvas);
+    
   }, [isInitialized]);
 
   return (
