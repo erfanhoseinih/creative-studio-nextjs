@@ -16,15 +16,20 @@
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-family: "JetBrains";
     font-size: 70px;
     margin: 0px;
     padding: 0px;
- 
+
 }
 
 
 .title h1 {
-    margin: 0px 50px;
+    margin: 0px;
+    padding: 0px;
+
 }

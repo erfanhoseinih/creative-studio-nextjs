@@ -1,0 +1,23 @@
+
+.logoSpace {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--color-primary);
+    .logo {
+        width:100px;
+        align-items: center;
+    }
+}
+
+
+
+.cls1 {
+    fill: none;
+    stroke: #000;
+    stroke-width: 28px;
+    stroke-miterlimit: 10;
+}

@@ -38,10 +38,11 @@ body {
     display: none;
 }
 
-p::selection {
+*::selection {
     background: var(--color-secondary);
     color: var(--color-primary);
 }
+ 
 
 img::selection {
     background: none;

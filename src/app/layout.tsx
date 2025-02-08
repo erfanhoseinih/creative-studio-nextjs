@@ -1,10 +1,9 @@
-
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import LogoAnimation from "../components/LogoAnimation/LogoAnimation";
 
 import type { Metadata } from "next";
 import "./globals.css";
- 
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LogoAnimation />
         <Header />
         <main>{children}</main>
         <Footer />
