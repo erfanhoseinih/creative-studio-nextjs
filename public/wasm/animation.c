@@ -16,6 +16,8 @@ float perlin_amp_falloff = 0.5;
 float perlin[PERLIN_SIZE + 1];
 float pMouseX = 0;
 float pMouseY = 0;
+float pMouseX2 = 0;
+float pMouseY2 = 0;
 
 float dist(float xp0, float yp0, float xp1, float yp1)
 {
@@ -125,10 +127,22 @@ void noiseSeed(unsigned int seed)
     initialize_perlin();
 }
 
+float constructor(float n, float n1, float n2)
+{
+    if (n < n1)
+    {
+        n = n1;
+    }
+    else if (n > n2)
+    {
+        n = n2;
+    }
+    return n;
+}
+
 EMSCRIPTEN_KEEPALIVE
 void getWaves(float *output, float *outputLen, float animationTime, int width, int height, int lineScale, int lineDetiles, float mouseX, float mouseY)
 {
-
     int indexLine = 0;
     for (int j = -lineDetiles * 3; j < height + lineDetiles * 3; j += lineDetiles)
     {
@@ -151,22 +165,28 @@ void getWaves(float *output, float *outputLen, float animationTime, int width, i
             float mouseMotion = 0.1;
             if (MouseSpaceArea > dist(mouseX, mouseY, x, y))
             {
-                float dirX = (mouseX - pMouseX)*(1-dist(mouseX, mouseY, x, y)/MouseSpaceArea);
-                float dirY = (mouseY - pMouseY)*(1-dist(mouseX, mouseY, x, y)/MouseSpaceArea);
-                x += dirX * powNum ;
-                y += dirY * powNum ;
+                if (fabsf(pMouseX - pMouseX2) >= fabsf(mouseX - pMouseX) / 2 || fabsf(pMouseY - pMouseY2) >= fabsf(mouseY - pMouseY) / 2)
+                {
+                    float dirX = (mouseX - pMouseX) * (1 - dist(mouseX, mouseY, x, y) / MouseSpaceArea);
+                    float dirY = (mouseY - pMouseY) * (1 - dist(mouseX, mouseY, x, y) / MouseSpaceArea);
+                    x += dirX * powNum;
+                    y += dirY * powNum;
+                }
             }
 
-            if(animationTime<0.001){
-                mouseMotion =1;
+            if (animationTime < 0.001)
+            {
+                mouseMotion = 1;
             }
 
-            output[index] = lerp(output[index], x, mouseMotion );
+            output[index] = lerp(output[index], x, mouseMotion);
             index++;
-            output[index] = lerp(output[index], y, mouseMotion );
+            output[index] = lerp(output[index], y, mouseMotion);
             index++;
         }
     }
+    pMouseX2 = pMouseX;
+    pMouseY2 = pMouseY;
     pMouseX = mouseX;
     pMouseY = mouseY;
 

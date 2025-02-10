@@ -26,7 +26,6 @@ const CanvasComponent = () => {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-  
       ctx.canvas.width = canvas.clientWidth;
       ctx.canvas.height = canvas.clientHeight;
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -44,12 +43,12 @@ const CanvasComponent = () => {
       const rect = canvas.getBoundingClientRect();
       mouseX = event.clientX - rect.left;
       mouseY = event.clientY - rect.top;
+      // console.log(mouseX , mouseY)
     });
 
     const animate = () => {
+      requestAnimationFrame(animate);
 
-      // requestAnimationFrame(animate);
-      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#f40c3f";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -81,14 +80,15 @@ const CanvasComponent = () => {
         ctx.lineCap = "round";
         ctx.stroke();
       }
-
+      
+      
+    
       animationTime += 0.0002;
     };
-    
+
     animate();
 
     window.addEventListener("resize", resizeCanvas);
-    
   }, [isInitialized]);
 
   return (
